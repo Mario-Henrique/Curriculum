@@ -1,0 +1,188 @@
+/* 
+Paleta
+    #3A87C1 Azul ciano
+    #0068B5 Azul ciano médio (Intel)
+    #102536 Azul ciano escuro
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Sofia&display=swap');
+
+*{
+    margin: 0;
+}
+
+:root{
+    --fonteTitulo: Sacramento, Sofia, sans-serif;
+    --fonteTexto: sans-serif;
+
+    --cor0: #3A87C1;
+    --cor1: #0068B5;
+    --cor2: #102536;
+}
+
+#menu{
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    padding: 10px 15px;
+    left: -300px;
+    
+    background-color: var(--cor2);
+
+    overflow-y: auto;
+
+    transition: all ease-in-out .5s;
+
+    z-index: 9000; /* Um alto valor para sobrepor qualquer item da tela */
+}
+
+#menu img{
+    margin: 15px auto;
+    display: block;
+
+    width: 100px;
+    border: 5px solid var(--cor0);
+    border-radius: 50%;
+}
+
+#menu h1{
+    color: var(--cor1);
+    font: normal 1.2em serif;
+}
+
+.nav-menu{
+    padding: 1.5rem;
+}
+
+.nav-menu a,
+.nav-menu a:focus{
+    display: flex;
+    align-items: center;
+    color: #d3d3d342;
+    transition: .3s;
+    font-size: .9em;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i{
+    font-size: 1.5em;
+    padding-right: .8rem;
+    color: #d3d3d391;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a{
+    color: var(--cor1);
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover > a i{
+    color: var(--cor0);
+}
+
+body{
+    background-color: black;
+}
+
+.menu-mobile{
+    display: flex;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    width: 45px;
+    height: 45px;
+    
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--cor1);
+    color: #fff;
+    font-size: 1.5rem;
+    
+    border-radius: 4rem;
+    
+    cursor: pointer;
+    
+    z-index: 10;
+}
+
+.menu-nav-active{
+    overflow: hidden;
+}
+
+.menu-nav-active #menu{
+    left: 0;
+}
+
+main{
+    margin-left: 0;
+}
+
+#credenciais{
+    width: 100%;
+    height: 100vh;
+
+    background: #000 url('http://placekitten.com/600/480') no-repeat fixed center top;
+    background-size: cover;
+
+    color: #000;
+}
+
+#credenciais .texto{
+    display: inline-block;
+    margin-top: 75vh;
+    margin-left: 2%;
+}
+
+#credenciais .texto h1{
+    font: bold 2em/.8em var(--fonteTitulo);
+    color: var(--cor2);
+
+    text-shadow: 1.5px 1.5px 5px rgba(255, 255, 255, 0.226);
+}
+
+#credenciais .texto p{
+    font: normal 1em var(--fonteTexto);
+    color: var(--cor0);
+}
+
+#habilidades{
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--cor0);
+    color: var(--cor1);
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
+}
+
+/* Telas com no mínimo 720px de largura apresentam este estilo */
+@media only screen and (min-width: 720px){
+    main{
+        margin-left: 300px;
+    }
+    
+    #menu{
+        left: 0;
+    }    
+    
+    #menu h1{
+        color: var(--cor1);
+        font: normal 1.5em serif;
+    }
+
+    .menu-mobile{
+        display: none;
+    }
+
+    #credenciais .texto h1{
+        font: bold 3.5em/.8em var(--fonteTitulo);
+    }
+}
