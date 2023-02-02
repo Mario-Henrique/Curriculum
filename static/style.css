@@ -214,13 +214,26 @@ section{
     position: absolute;
     top: 0;
     left: -9px;
-    
+
     width: 16px;
     height: 16px;
 
     border: 2px solid var(--cor1);
     border-radius: 50%;
     background: #fff;
+}
+
+/* Controle do Carousel em Portifólio */
+.carousel-control-prev{
+    margin-left: -4rem;
+}
+
+.carousel-control-next{
+    margin-right: -4rem;
+}
+
+.carousel-indicators{
+    margin-bottom: -4rem;
 }
 
 footer{
