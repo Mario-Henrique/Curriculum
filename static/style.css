@@ -5,14 +5,14 @@ Paleta
     #102536 Azul ciano escuro
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Sacramento&family=Sofia&display=swap');
 
 *{
     margin: 0;
 }
 
 :root{
-    --fonteTitulo: Sacramento, Sofia, sans-serif;
+    --fonteTitulo: Oswald, sans-serif;
     --fonteTexto: sans-serif;
 
     --cor0: #3A87C1;
@@ -57,7 +57,7 @@ Paleta
 
 #menu h1{
     color: var(--cor1);
-    font: normal 1.2em serif;
+    font: normal 1.2em Sacramento, Sofia, sans-serif;
 }
 
 .nav-menu{
@@ -146,28 +146,34 @@ section{
     width: 100%;
     height: 100vh;
 
-    background: #000 url('http://placekitten.com/600/480') no-repeat fixed center top;
+    background: #000 url('img/bg-programmer.jpg') no-repeat fixed right center;
     background-size: cover;
 
     color: #000;
 }
 
 #credenciais .texto{
-    display: inline-block;
-    margin-top: 75vh;
-    margin-left: 2%;
+    margin-top: 60vh;
+    margin-bottom: 100%;
+    padding: 15px;
+    padding-bottom: 0;
+
+    background: linear-gradient(to right, #ffffff83 10%, transparent 90%);
 }
 
 #credenciais .texto h1{
     font: bold 2em/.8em var(--fonteTitulo);
-    color: var(--cor2);
-
-    text-shadow: 1.5px 1.5px 5px rgba(255, 255, 255, 0.226);
+    color: var(--cor1);
+    
+    text-shadow: -1px 0 black, 0 1px black;
 }
 
 #credenciais .texto p{
+    display: inline;
     font: normal 1em var(--fonteTexto);
-    color: var(--cor0);
+    color: var(--cor2);
+
+    background: #ffffff60;
 }
 
 .icon{
@@ -239,10 +245,10 @@ section{
 footer{
     background-color: #000;
 
-    margin-top: 15px;
     padding: 10px;
 
     text-align: center;
+    color: #FFF;
 }
 
 /* Estilização da barra de scrool */
@@ -260,8 +266,8 @@ footer{
     background-color: var(--cor0);
 }
 
-/* Estilização para desktop (resolução mínima de 1440px) */
-@media only screen and (min-width: 1440px){
+/* Estilização para desktop (resolução mínima de 1280px) */
+@media only screen and (min-width: 1280px){
     main{
         margin-left: 300px;
     }
@@ -272,7 +278,11 @@ footer{
     
     #menu h1{
         color: var(--cor1);
-        font: normal 1.5em serif;
+        font-size: 1.5em;
+    }
+
+    #credenciais .texto p{
+        background: none;
     }
 
     .menu-mobile{
@@ -280,7 +290,8 @@ footer{
     }
 
     #credenciais .texto h1{
-        font: bold 3.5em/.8em var(--fonteTitulo);
+        font-size: 3.5em;
+        line-height: 1em;
     }
 
     footer{
