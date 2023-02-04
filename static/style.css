@@ -243,12 +243,16 @@ section{
 }
 
 footer{
-    background-color: #000;
+    background-color: var(--cor2);
 
     padding: 10px;
 
     text-align: center;
     color: #FFF;
+}
+
+.card{
+    height: 100%;
 }
 
 /* Estilização da barra de scrool */
